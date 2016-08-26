@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/0.9.3/vue-resource.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+
+        <button type="button" name="button" @click='getApi'>re</button>
+
+        <div class="box">
+          {{pokemon[page].name}}
+          <div class="screen">
+            <img id="picture" :src="pokemon[page].icon">
+          </div>
+          <div class="button">
+            <a class="previous" @click="previous"><br>Previous</a>
+            <a class="next" @click="next"><br>Next</a>
+          </div>
+          <div class="map">
+              <div id="map"></div>
+          </div>
+        </div>
+
+
+
+
+
+    </div>
+
+</body>
+<script src="./app.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAD7aVfDsori3gazo4jvoaeURiGM-X_-UU&callback=" async defer></script>
+<link rel="stylesheet" href="css.css" media="screen" title="no title" charset="utf-8">
+
+</html>
